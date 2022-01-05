@@ -2,9 +2,10 @@
   "name": "instaclone2",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon --exec babel-node server",
+    "migrate": "npx prisma migrate dev",
+    "studio": "npx prisma studio"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,16 @@
   "bugs": {
     "url": "https://github.com/juhyeongee/instaclone_2/issues"
   },
-  "homepage": "https://github.com/juhyeongee/instaclone_2#readme"
+  "homepage": "https://github.com/juhyeongee/instaclone_2#readme",
+  "dependencies": {
+    "@prisma/client": "^3.7.0",
+    "apollo-server": "^2.25.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.7",
+    "@babel/node": "^7.16.7",
+    "@babel/preset-env": "^7.16.7",
+    "nodemon": "^2.0.15",
+    "prisma": "^3.7.0"
+  }
 }
